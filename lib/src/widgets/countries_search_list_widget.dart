@@ -25,12 +25,15 @@ class CountrySearchListWidget extends StatefulWidget {
 
   @override
   _CountrySearchListWidgetState createState() =>
-      _CountrySearchListWidgetState();
+      _CountrySearchListWidgetState(locale);
 }
 
 class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
   late TextEditingController _searchController = TextEditingController();
   late List<Country> filteredCountries;
+  final String? locale;
+
+  _CountrySearchListWidgetState(this.locale);
 
   @override
   void initState() {
@@ -52,7 +55,10 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
   /// Returns [InputDecoration] of the search box
   InputDecoration getSearchBoxDecoration() {
     return widget.searchBoxDecoration ??
-        InputDecoration(labelText: 'Search by country name or dial code');
+        InputDecoration(
+            labelText: locale == 'ar'
+                ? 'ابحث عن دولة أو رقم الهاتف'
+                : 'Search by country name or dial code');
   }
 
   @override
