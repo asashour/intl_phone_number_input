@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl_phone_number_input/src/utils/phone_number/phone_number_util.dart';
 
@@ -7,7 +6,7 @@ typedef OnInputFormatted<T> = void Function(T value);
 /// [AsYouTypeFormatter] is a custom formatter that extends [TextInputFormatter]
 /// which provides as you type validation and formatting for phone number inputted.
 class AsYouTypeFormatter extends TextInputFormatter {
-  /// Contains characters allowed as seperators.
+  /// Contains characters allowed as separators.
   final RegExp separatorChars = RegExp(r'[^\d]+');
 
   /// The [allowedChars] contains [RegExp] for allowable phone number characters.
