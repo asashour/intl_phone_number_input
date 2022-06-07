@@ -57,7 +57,7 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
     return widget.searchBoxDecoration ??
         InputDecoration(
             labelText: locale == 'ar'
-                ? 'ابحث عن دولة أو رقم الهاتف'
+                ? 'ابحث عن دولة أو رمز الهاتف'
                 : 'Search by country name or dial code');
   }
 
